@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Portal Athena</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+
+    <header>
+        <hgroup>
+            <span>📜</span>
+            <h1>Athena: Portal de Estudos Clássicos</h1>
+        </hgroup>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>CONTATE-NOS</h2>
+            <p class="subtitle">Preencha o formulário abaixo e entraremos em contato</p>
+
+            <form id="contactForm">
+                <fieldset>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required placeholder="Seu nome completo">
+                </fieldset>
+
+                <fieldset>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required placeholder="seu.email@exemplo.com">
+                </fieldset>
+
+                <fieldset>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required placeholder="(00) 00000-0000">
+                </fieldset>
+
+                <fieldset>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" required placeholder="Rua, número, bairro">
+                </fieldset>
+
+                <fieldset>
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="origem">Onde nos conheceu?</label>
+                    <select id="origem" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Google / Busca">Google / Busca</option>
+                        <option value="Redes Sociais">Redes Sociais</option>
+                        <option value="Indicação de Amigo">Indicação de Amigo</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" required placeholder="Digite sua mensagem aqui..."></textarea>
+                </fieldset>
+
+                <fieldset class="checkbox-group">
+                    <input type="checkbox" id="novidades">
+                    <label for="novidades">Deseja receber novidades?</label>
+                </fieldset>
+
+                <button type="submit" id="btnExibir">Exibir Dados</button>
+            </form>
+        </section>
+
+        <section id="confirmacaoSection" class="confirm-section hidden">
+            <h3>Confirmação dos Dados</h3>
+            <p>Por favor, verifique se todas as informações estão corretas antes de enviar:</p>
+            
+            <output id="dadosInseridos">
+                </output>
+
+            <p class="action-buttons">
+                <button type="button" id="btnConfirmar" class="btn-success">Confirmar e Enviar</button>
+            </p>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
